@@ -1,0 +1,40 @@
+{
+  "name": "scrappy",
+  "version": "0.1.0",
+  "description": "scrappy all them scraps",
+  "main": "index.js",
+  "scripts": {
+    "test": "webpack",
+    "start": "webpack-dev-server",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && webpack",
+    "deploy": "npm run build && gh-pages -d dist -m \"Updates --skip-ci\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SmithPeder/scrappy.git"
+  },
+  "author": "Peder Smith",
+  "license": "MIT",
+  "dependencies": {
+    "browser-sync": "^2.23.6",
+    "lodash": "^4.17.5",
+    "path": "^0.12.7",
+    "prop-types": "^15.6.1",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "react-router-dom": "^4.2.2"
+  },
+  "devDependencies": {
+    "babel-core": "^5.2.17",
+    "babel-loader": "^5.0.0",
+    "create-react-component-folder": "^0.1.14",
+    "css-loader": "^0.15.1",
+    "eslint": "^4.19.1",
+    "html-webpack-plugin": "^2.30.1",
+    "react-scripts": "1.1.4",
+    "style-loader": "^0.12.3",
+    "webpack": "^1.9.10",
+    "webpack-dev-server": "^1.9.0"
+  }
+}
