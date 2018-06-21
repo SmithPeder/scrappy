@@ -1,0 +1,30 @@
+{
+  "pooperties": [
+    {
+      "property_id": "122084567",
+      "property_adr": "Address , 1400 something",
+      "property_sold": false,
+      "property_listprice": "3000000",
+      "property_sellers": [
+        {
+          "name": "FullName",
+          "firm": "FullFirmName"
+        },
+        {
+          "name": "FullName",
+          "firm": "FullFirmName"
+        }
+      ],
+      "property_records": [
+        {
+          "sold": "03/09/1997",
+          "price": "850000"
+        },
+        {
+          "sold": "03/09/1998",
+          "price": "850000"
+        }
+      ]
+    }
+  ]
+}
