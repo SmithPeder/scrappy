@@ -11,8 +11,12 @@ for l in scrape:
     arr.append(l.split('¤'))
 
 # LINE STRUCT [id , adr , sold , listprice , names , firm , records]
+used_property_id_list = []
 for l in arr:
+    if l[0] in used_property_id_list:
+        continue
     property_id = l[0]
+    used_property_id_list.append(property_id)
     property_adr = l[1]
     property_sold = False
     if(l[2].strip() == "SOLGT"):
