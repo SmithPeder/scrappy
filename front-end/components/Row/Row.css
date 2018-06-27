@@ -4,16 +4,30 @@
   width: 100%;
   margin: 10px 0;
   border-radius: 5px;
-  background: rgb(220,220,220);
+  background: rgb(220, 220, 220);
   font-family: 'Inconsolata', monospace;
 }
-
-span {
+.root span {
   margin: 0;
   padding: 20px;
 }
 
-.innerRow {
-
+.topRow {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+}
+.topRow span {
+  padding: 0 20px;
 }
 
+.innerRow {
+  display: flex;
+  justify-content: space-between;
+}
+.innerRow span {
+  padding: 0;
+}

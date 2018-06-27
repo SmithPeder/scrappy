@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import styles from "./VerticalList.css";
+import styles from './VerticalList.css';
 
-import Row from "../Row/Row.js";
+import { Row, TopRow } from '../Row/Row.js';
 
 class VerticalList extends Component {
   render() {
@@ -11,6 +11,15 @@ class VerticalList extends Component {
     // of requstedDisplay
     const { data, requstedFields, requstedDisplay } = this.props;
     const generatedRows = [];
+
+    generatedRows.push(
+      requstedFields != null ? (
+        <TopRow arr={requstedFields} display={requstedDisplay} />
+      ) : (
+        <TopRow all={true} display={requstedDisplay} />
+      )
+    );
+
     const reducedData =
       requstedFields != null
         ? data.map(property => {
