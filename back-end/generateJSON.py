@@ -17,7 +17,7 @@ for l in arr:
         continue
     property_id = l[0]
     used_property_id_list.append(property_id)
-    property_adr = l[1]
+    property_adr = ' '.join(l[1].split(' ')[:len(l[1].split(' '))-1])
     property_sold = False
     if(l[2].strip() == "SOLGT"):
         property_sold = True
