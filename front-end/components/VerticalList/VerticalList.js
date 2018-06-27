@@ -23,6 +23,7 @@ class VerticalList extends Component {
     const reducedData =
       requstedFields != null
         ? data.map(property => {
+            const firm = property.property_sellers[0].firm;
             const reducedRow = Object.keys(property)
               .filter(key => requstedFields.includes(key))
               .reduce((obj, key) => {
@@ -30,10 +31,12 @@ class VerticalList extends Component {
                 return obj;
               }, {});
             generatedRows.push(
-              <Row data={reducedRow} display={requstedDisplay} />
+              <Row data={reducedRow} display={requstedDisplay} firm={firm} />
             );
           })
-        : generatedRows.push(<Row data={data} display={requstedDisplay} />);
+        : generatedRows.push(
+            <Row data={data} display={requstedDisplay} firm={firm} />
+          );
 
     return <div className={styles.root}>{generatedRows}</div>;
   }

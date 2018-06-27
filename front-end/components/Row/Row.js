@@ -6,9 +6,9 @@ import styles from './Row.css';
 
 class Row extends Component {
   render() {
-    const { data, display } = this.props;
-
+    const { data, display, firm } = this.props;
     const row = [];
+    row.push(<img src={`../img/${firm}.jpg`} height={'60px'} width={'60px'} />);
     data &&
       Object.values(data).forEach((p, i) => {
         if (typeof p === 'object') {
